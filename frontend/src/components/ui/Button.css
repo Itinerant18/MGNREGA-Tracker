@@ -1,0 +1,114 @@
+.btn-base {
+  @apply relative inline-flex items-center justify-center gap-2 font-semibold 
+         transition-all duration-200 ease-out focus:outline-none focus:ring-4 
+         disabled:cursor-not-allowed border-0;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+
+.btn-loader {
+  @apply animate-spin;
+  width: 1em;
+  height: 1em;
+}
+
+.btn-content {
+  @apply flex items-center;
+}
+
+.btn-icon {
+  @apply flex items-center;
+}
+
+.btn-icon-left {
+  @apply -ml-1;
+}
+
+.btn-icon-right {
+  @apply -mr-1;
+}
+
+/* Sizes */
+.btn-sm {
+  @apply px-3 py-2 text-sm rounded-lg min-h-[2rem];
+}
+
+.btn-md {
+  @apply px-4 py-2.5 text-base rounded-xl min-h-[2.75rem];
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-lg rounded-xl min-h-[3.25rem];
+}
+
+.btn-xl {
+  @apply px-8 py-4 text-xl rounded-2xl min-h-[4rem];
+}
+
+.btn-full-width {
+  @apply w-full;
+}
+
+/* Variants */
+.btn-primary {
+  @apply bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg
+         hover:from-green-600 hover:to-green-700 hover:shadow-xl
+         focus:ring-green-500/25 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg
+         hover:from-orange-600 hover:to-orange-700 hover:shadow-xl
+         focus:ring-orange-500/25 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-green-500 text-green-600 bg-transparent
+         hover:bg-green-50 hover:border-green-600
+         focus:ring-green-500/25 active:scale-95;
+}
+
+.btn-ghost {
+  @apply text-gray-600 bg-transparent hover:bg-gray-100
+         focus:ring-gray-500/25 active:scale-95;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg
+         hover:from-red-600 hover:to-red-700 hover:shadow-xl
+         focus:ring-red-500/25 active:scale-95;
+}
+
+.btn-disabled {
+  @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .btn-outline {
+    @apply border-green-400 text-green-400 hover:bg-green-400/10;
+  }
+  
+  .btn-ghost {
+    @apply text-gray-400 hover:bg-gray-800;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .btn-base {
+    @apply border border-current;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-base {
+    @apply transition-none;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.btn-base:focus-visible {
+  @apply ring-4 ring-offset-2;
+}

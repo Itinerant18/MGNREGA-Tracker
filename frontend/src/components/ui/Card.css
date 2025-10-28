@@ -1,0 +1,60 @@
+.card-base {
+  @apply rounded-2xl transition-all duration-300 ease-out;
+  backdrop-filter: blur(8px);
+}
+
+.card-default {
+  @apply bg-white/80 border border-white/20 shadow-lg;
+}
+
+.card-elevated {
+  @apply bg-white/90 shadow-2xl border border-white/30;
+}
+
+.card-bordered {
+  @apply bg-white/70 border-2 border-green-200/50;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-br from-white/90 to-green-50/80 border border-green-100/30 shadow-xl;
+}
+
+.card-hover {
+  @apply hover:shadow-2xl hover:shadow-green-500/10;
+}
+
+.card-header {
+  @apply mb-6 pb-4 border-b border-gray-200/50;
+}
+
+.card-content {
+  @apply space-y-4;
+}
+
+.card-footer {
+  @apply mt-6 pt-4 border-t border-gray-200/50;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .card-default {
+    @apply bg-gray-900/80 border-gray-700/30;
+  }
+  
+  .card-elevated {
+    @apply bg-gray-900/90 border-gray-700/40;
+  }
+  
+  .card-bordered {
+    @apply bg-gray-900/70 border-green-400/30;
+  }
+  
+  .card-gradient {
+    @apply from-gray-900/90 to-green-900/20 border-green-400/20;
+  }
+  
+  .card-header,
+  .card-footer {
+    @apply border-gray-700/30;
+  }
+}

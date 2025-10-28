@@ -1,0 +1,273 @@
+.dashboard-page {
+  padding: 20px 0;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-info h1 {
+  margin: 0 0 8px 0;
+  color: #2E7D32;
+  font-size: 2rem;
+}
+
+.state-info {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.last-updated {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 8px 0 0 0;
+}
+
+.back-button {
+  background: #666;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background: #555;
+}
+
+.performance-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #2E7D32;
+  transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.metric-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-header .icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.metric-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2E7D32;
+  margin: 0 0 4px 0;
+}
+
+.metric-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.metric-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.metric-value .number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2E7D32;
+  line-height: 1;
+}
+
+.metric-value .label {
+  font-size: 1.1rem;
+  color: #757575;
+  font-weight: 500;
+}
+
+.metric-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.progress-bar, .target-progress {
+  width: 100%;
+  height: 12px;
+  background: #E0E0E0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill, .target-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #2E7D32);
+  transition: width 0.8s ease;
+  border-radius: 6px;
+}
+
+.comparison {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.metric-card.employment {
+  border-left-color: #4CAF50;
+}
+
+.metric-card.work-completion {
+  border-left-color: #FF9800;
+}
+
+.metric-card.avg-days {
+  border-left-color: #2196F3;
+}
+
+.metric-card.women {
+  border-left-color: #E91E63;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+  color: white;
+  border-radius: 16px;
+  padding: 24px;
+  grid-column: 1 / -1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.summary-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.summary-row span:first-child {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.demo-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.demo-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .header-info h1 {
+    font-size: 1.5rem;
+  }
+  
+  .performance-dashboard {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .metric-card {
+    padding: 20px;
+  }
+  
+  .metric-value .number {
+    font-size: 2.5rem;
+  }
+  
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.data-source-indicator {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.real-data-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.badge-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+}
+
+.badge-content p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
