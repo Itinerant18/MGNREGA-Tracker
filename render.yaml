@@ -1,0 +1,63 @@
+# Render Blueprint for MGNREGA Tracker
+# Reference: https://render.com/docs/blueprint-spec
+
+# Backend Service
+services:
+  - type: web
+    name: mgnrega-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: node src/index.js
+    envVars:
+      # Server Configuration
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        value: https://your-netlify-app.netlify.app  # Update this with your actual Netlify URL
+      
+      # Data.gov.in API Configuration
+      - key: DATA_GOV_BASE_URL
+        value: https://api.data.gov.in/resource/
+      - key: MGNREGA_RESOURCE_ID
+        value: 9ef84268-d588-465a-a308-a864a43d0070
+      - key: API_KEY
+        value: 579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b
+      
+      # Real MGNREGA Data Sources
+      - key: NREGA_STATE_REPORT_BASE
+        value: https://nrega.dord.gov.in/MGNREGA_new/
+      - key: BHUVAN_MGNREGA_BASE
+        value: https://bhuvan-app2.nrsc.gov.in/mgnrega/
+      - key: NREGA_SOFT_BASE
+        value: https://nregaplus.nic.in/netnrega/
+      
+      # Cache Configuration
+      - key: CACHE_TTL_DISTRICTS
+        value: '3600'  # 1 hour
+      - key: CACHE_TTL_PERFORMANCE
+        value: '1800'  # 30 minutes
+      
+      # Logging
+      - key: LOG_LEVEL
+        value: info
+
+# If you add a MongoDB database in the future, you can uncomment and update this section:
+# databases:
+#   - name: mgnrega-db
+#     databaseName: mgnrega
+#     user: mgnrega-user
+#     plan: free
+#     ipAllowList:
+#       - ip: 0.0.0.0/0
+#         comment: Allow all IPs (restrict in production)
+
+# Environment variables that should be linked to the web service
+# environmentVariables:
+#   - key: MONGODB_URI
+#     fromDatabase:
+#       name: mgnrega-db
+#       property: connectionString
+#   - key: MONGODB_DATABASE
+#     value: mgnrega

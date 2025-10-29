@@ -392,3 +392,12 @@
 {"level":"info","message":"Fetching districts from CSV for: Andhra Pradesh","timestamp":"2025-10-28T11:49:54.201Z"}
 {"level":"info","message":"Fetching districts from CSV for: Andhra Pradesh","timestamp":"2025-10-28T11:50:19.438Z"}
 {"level":"info","message":"Fetching districts from CSV for: Andhra Pradesh","timestamp":"2025-10-28T11:50:19.510Z"}
+{"level":"info","message":"Using in-memory cache service","timestamp":"2025-10-29T03:42:42.378Z"}
+{"level":"info","message":"CSV Data Service initialized","timestamp":"2025-10-29T03:42:42.409Z"}
+{"level":"info","message":"CSV file found, loading data from file...","timestamp":"2025-10-29T03:42:42.411Z"}
+{"level":"info","message":"Loading MGNREGA data from CSV file...","timestamp":"2025-10-29T03:42:42.412Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-10-29T03:42:42.439Z"}
+{"level":"info","message":"CSV loaded successfully: 4115 records","timestamp":"2025-10-29T03:42:42.647Z"}
+{"level":"info","message":"Processing CSV data...","timestamp":"2025-10-29T03:42:42.649Z"}
+{"level":"info","message":"Found 4115 records for Andhra Pradesh","timestamp":"2025-10-29T03:42:42.651Z"}
+{"level":"info","message":"Processed data for 26 districts","timestamp":"2025-10-29T03:42:42.726Z"}
