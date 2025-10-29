@@ -8,13 +8,13 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
 function App() {
-  // For now, we'll use Andhra Pradesh since our backend has real data for it
+  // For now, we'll use Andhra Pradesh since we have real data for it
   const [selectedState] = useState('Andhra Pradesh');
   const [selectedDistrict, setSelectedDistrict] = useState('');
 
   const handleDistrictSelect = (district) => {
     setSelectedDistrict(district);
-    console.log('Selected district:', district);
+    console.log('✅ Selected district:', district);
   };
 
   return (
